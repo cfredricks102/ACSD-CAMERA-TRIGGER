@@ -1,0 +1,5 @@
+menuconfig EXAMPLES_GPIO_TRIGGER 
+ 	bool "gpio_trigger"
+ 	default n
+ 	---help---
+ 			Enable support for gpio_trigger
