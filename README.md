@@ -1,6 +1,11 @@
 # Project: Autonomous Crop Surveillance Drone (ACSD)
 
+***Project Description***
+
+The Autonomous Crop Surveillance Drone (ACSD) is our proposed solution. The unmanned aerial vehicle (UAV) will fly at an optimized altitude of 10ft above the field under test (FUT). After the user gives the dimensions of the FUT, the drone will have an automated distance interval in between each capture shown in Figure 1. This will optimize the amount of space surveyed relative to the resolution of the ZED camera. Once one image is captured, the image will then be processed by the YoloV7 algorithm processed on Jetson Nano. The real time processing will be occurring simultaneously as the UAV moves to the next capture location. Once the entire field has been successfully surveyed, the UAV will land and the user can extract the data via a USB SSD. Inserting the SSD into the PC,  the User Interface will generate an interactive map that will indicate which capture location has diseased foliage within a degree of accuracy. 
+
 ### **Module: ACSD-CAMERA-TRIGGER**
 *This repository includes the GPIO Camera Triggering software that is a piece of the ACSD System*
 
-This code allows communication between the PX4 Flight Controller and the Nivida Jetson Nano to enable autonmous image triggering
+***Module Description***
+The gpio_trigger program enables General Purpose Input Output (GPIO) communication between the Nvidia Jetson Nano and the PX4 Holybro 6C flight controller. After the user sets waypoints for the Aerial Vehicle to hover, the gpio_trigger software will automatically trigger the Jetson to take an image.  
